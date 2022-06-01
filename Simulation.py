@@ -41,6 +41,7 @@ class Simulation:
                            cum_weights=(settings["density"], 1), k=self.num_cols) for i in range(self.num_rows)
         ])
 
+        # begin the fire
         self.running = True
         self.grid_cell[math.floor(len(self.grid_cell) / 2)][math.floor(len(self.grid_cell[0]) / 2)] = 1
 
