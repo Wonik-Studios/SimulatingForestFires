@@ -53,7 +53,8 @@ class Simulation:
                     self.cell_iteration(i, j, new_grid_cell)
 
         self.grid_cell = new_grid_cell
-
+        
+    # i represents each row; j represents each column
     def cell_iteration(self, i, j, new_grid_cell):
         new_grid_cell[i][j] = random.choices([3, 1], cum_weights=[self.settings["burnout"], 1], k=1)[0]
 
