@@ -28,15 +28,6 @@ class Simulation:
         self.num_cols = math.ceil(self.width / self.block_size)
         self.num_rows = math.ceil(self.height / self.block_size)
 
-        # We can calculate the horizontal and vertical wind by 
-        # considering the wind-power in conjunction with the wind-angle to be
-        # vectors in 2d space. We can use a bit of trig to find it.
-        # the horizontal_wind is positive when there is wind to the right
-        self.horizontal_wind = 0 if settings["wind-power"] == 0 else math.sin(settings["wind-angle"]) / settings[
-            "wind-power"]
-        self.vertical_wind = 0 if settings["wind-power"] == 0 else math.sin(settings["wind-angle"]) / settings[
-            "wind-power"]
-
         self.landscape = generate_noise(self.num_cols, self.num_rows)
 
         # initializing the pygame stuff
