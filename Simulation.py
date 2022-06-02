@@ -28,6 +28,8 @@ class Simulation:
         self.num_cols = math.ceil(self.width / self.block_size)
         self.num_rows = math.ceil(self.height / self.block_size)
 
+        # this is initializing the wind and the landscape
+        self.wind = self.get_wind()
         self.landscape = generate_noise(self.num_cols, self.num_rows)
 
         # initializing the pygame stuff
@@ -66,6 +68,16 @@ class Simulation:
                             new_grid_cell[i + ii][j + jj] = \
                             random.choices([1, 0], cum_weights=[self.settings["ignition"], 1], k=1)[0]
 
+    def get_wind(self):
+        power = []
+        angle = self.settings["angle"]
+
+        for i in range(8):
+            power.append(math.sin(abs(angle - 45 * i) * self.settings["wind-power"] / 100))
+        
+        power = [power[3], power[2], power[1], power[4], power[0], power[5], power[6], power[7]]
+        return power
+
     def draw_grid(self):
         # This iterates through every single cell to determine what color it should be based on
         # the values in the grid_cell.
@@ -88,6 +100,7 @@ class Simulation:
                                  pygame.Rect((i * self.block_size, j * self.block_size),
                                              (self.block_size, self.block_size))
                                  )
+    
 
     def run(self):
         while self.running:
