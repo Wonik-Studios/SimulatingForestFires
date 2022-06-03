@@ -9,7 +9,7 @@ def generate_noise(xpix, ypix):
     now = datetime.now()
 
     plt.imshow(pic, cmap='gray')
-    plt.savefig(f"LandscapeGraphs{os.sep}{now.strftime('%m-%d-%Y_%H:%M:%S')}")
+    plt.savefig(f"LandscapeGraphs{os.sep}{now.strftime('%m-%d-%Y_%H:%M:%S')}.png")
     return pic
 
 if __name__ == "__main__":
