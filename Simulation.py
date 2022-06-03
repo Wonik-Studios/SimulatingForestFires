@@ -66,16 +66,21 @@ class Simulation:
                     if not (j == 0 and jj == -1) and not (j == len(self.grid_cell[0]) - 1 and jj == 1):
                         if new_grid_cell[i + ii][j + jj] == 0:
                             new_grid_cell[i + ii][j + jj] = \
-                            random.choices([1, 0], cum_weights=[self.settings["ignition"], 1], k=1)[0]
+                            random.choices([1, 0], cum_weights=[(self.landscape[i][j] - self.landscape[i + ii][j + jj])
+                            + self.settings["ignition"] * (self.wind[3 * ii + jj + 4] + 1), 1], k=1)[0]
 
     def get_wind(self):
         power = []
-        angle = self.settings["angle"]
+        angle = self.settings["wind-angle"]
 
         for i in range(8):
-            power.append(math.sin(abs(angle - 45 * i) * self.settings["wind-power"] / 100))
+            power.append(
+                math.cos(math.radians(
+                        abs(angle - 45 * i))
+                    ) * self.settings["wind-power"] / 100
+                )
         
-        power = [power[3], power[2], power[1], power[4], power[0], power[5], power[6], power[7]]
+        power = [power[3], power[2], power[1], power[4], 0, power[0], power[5], power[6], power[7]]
         return power
 
     def draw_grid(self):

@@ -6,8 +6,9 @@ from Simulation import Simulation
 # Please read the study at: https://iopscience.iop.org/article/10.1088/1742-6596/285/1/012038/pdf#:~:text=The%20cellular%20automata%20model%20is,as%20the%20burning%20cells%20persist.
 # for more context.
 
-# The wind-power should be a value that ranges from 0-100 where 100 is maximumm wind and 0 is 
-settings = {"ignition": 0.5, "burnout": 0.2, "density": 0.7, "wind-angle": 30, "wind-power": 3}
+# The wind-power should be a value that ranges from 0-100 where 100 is maximumm wind and 0 is when
+# there is no wind in an environment. This is a demo of how to run the simulation:
+settings = {"ignition": 0.5, "burnout": 0.2, "density": 0.7, "wind-angle": 180, "wind-power": 50}
 
 simulation = Simulation(800, 600, 2, settings)
 simulation.run()
