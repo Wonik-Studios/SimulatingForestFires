@@ -1,5 +1,9 @@
 from Simulation import Simulation
 
+# Made by Wonik
+# https://wonik.tech
+# Notable Developers: Nathan Kim, Joshua Gallinger, Aryan Zafer
+
 # the ignition is the probability for which a nearby tree will catch on fire
 # burnout is the probability that a tree will completely burnout in a single generation
 # the density is the probability that a cell will contain vegetation at the start of the simulation
