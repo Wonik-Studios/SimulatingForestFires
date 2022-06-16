@@ -10,7 +10,7 @@ from Simulation import Simulation
 # there is no wind in an environment. This is a demo of how to run the simulation:
 settings = {}
 prompts = (
-("ignition", "Input the Ignition [0,1]", 0, 1),
+("ignition", "Input the Ignition [0, 1]", 0, 1),
 ("burnout", "Input the burnout [0, 1]", 0, 1),
 ("density", "Input the density [0, 1]", 0, 1),
 ("wind-angle", "Input the wind-angle [0, 360]", 0, 360),

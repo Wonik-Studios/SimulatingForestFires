@@ -83,6 +83,9 @@ class Simulation:
         power = [power[3], power[2], power[1], power[4], 0, power[0], power[5], power[6], power[7]]
         return power
 
+    def visual_cell_noise(self, row, col):
+        return min(abs(math.floor(self.landscape[row][col] * 255)) + 100, 255)
+
     def draw_grid(self):
         # This iterates through every single cell to determine what color it should be based on
         # the values in the grid_cell.
@@ -90,7 +93,7 @@ class Simulation:
             for j in range(self.num_rows):
 
                 if self.grid_cell[j][i] == 0:
-                    self.color = self.colors["green"]
+                    self.color = (11, self.visual_cell_noise(j, i), 17)
 
                 elif self.grid_cell[j][i] == 1:
                     self.color = self.colors["red"]
@@ -99,7 +102,8 @@ class Simulation:
                     self.color = self.colors["black"]
 
                 elif self.grid_cell[j][i] == 3:
-                    self.color = self.colors["grey"]
+                    constant_visual = self.visual_cell_noise(j, i)
+                    self.color = (constant_visual, constant_visual, constant_visual)
 
                 pygame.draw.rect(self.screen, self.color,
                                  pygame.Rect((i * self.block_size, j * self.block_size),
