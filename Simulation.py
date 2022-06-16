@@ -83,6 +83,7 @@ class Simulation:
         power = [power[3], power[2], power[1], power[4], 0, power[0], power[5], power[6], power[7]]
         return power
 
+    # Returns RGB value between 100-255 based on slope of cell
     def visual_cell_noise(self, row, col):
         return min(abs(math.floor(self.landscape[row][col] * 255)) + 100, 255)
 
