@@ -9,6 +9,35 @@ from Simulation import Simulation
 # The wind-power should be a value that ranges from 0-100 where 100 is maximumm wind and 0 is when
 # there is no wind in an environment. This is a demo of how to run the simulation:
 settings = {"ignition": 0.5, "burnout": 0.2, "density": 0.7, "wind-angle": 180, "wind-power": 50}
+prompts = (
+("ignition", "Input the Ignition [0,1]", 0, 1),
+("burnout", "Input the burnout [0, 1]", 0, 1),
+("density", "Input the density [0, 1]", 0, 1),
+("wind-angle", "Input the wind-angle [0, 360]", 0, 360),
+("wind-power", "Input the wind-power [0, 100]", 0, 100)
+)
+
+
+def getInput(key, msg, lower, upper):
+    print(msg)
+    while(True):
+        try:
+            result = float(input(">>"))
+        except ValueError:
+            print("Sorry, your input wasn't formatted properly")
+            continue
+
+        if result >= lower and result <= upper:
+            break
+        else:
+            print("Sorry, your input was not within the appropriate bounds.")
+    settings[key] = result
+
+
+for prompt in prompts:
+    getInput(prompt[0], prompt[1], prompt[2], prompt[3])
+
+print("Starting Simulation...")
 
 simulation = Simulation(800, 600, 2, settings)
 simulation.run()
