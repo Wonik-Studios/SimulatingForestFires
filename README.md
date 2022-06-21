@@ -1,5 +1,6 @@
-# SimulatingForestFires
+# Forest Fire Simulator
 
 A program that uses Cellular Automaton to simulate forest fires with surprising accuracy.
 
-Proper documentation will be included soon.
+# Documentation:
+https://wonik.tech/project/simulating-forestfires
