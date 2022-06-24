@@ -10,10 +10,10 @@ The repository can be cloned by cloning the repository from https://github.com/W
   git clone "https://github.com/Wonik-Studios/SimulatingForestFires.git"
 then you can download all the requirements from “requirements.txt” with:
 
-  `pip install -r SimulatingForestFires/requirements.txt`
+  ```pip install -r SimulatingForestFires/requirements.txt```
 Now, to run the code you can do:
 
-  `python SimulatingForestFires/Main.py`
+  ```python SimulatingForestFires/Main.py```
 You will be prompted for the parameters before the simulation starts. Also, do note that you will have to have python and pip installed to run the code.
 
 If instead, you would like to run the code in a program, you’ll have to set the parameters in a dictionary, import the Simulation class from the Simulation.py file, create an instance of the Simulation class and call the run function on it.
