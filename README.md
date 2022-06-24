@@ -21,13 +21,13 @@ If instead, you would like to run the code in a program, you’ll have to set th
 The Simulation object’s parameters are (xPixels, yPixels, cellPixelWidth, settings). The settings variable should be a dictionary with “ignition”, “burnout”, “density”, “wind-angle”, “wind-power” as keys. The values for these keys are explained up above.
 
 Example
-'''
+```
   settings = {"ignition": 0.5, "burnout": 0.2, "density": 0.7, "wind-angle": 180, "wind-power": 50}
   simulation = Simulation(800, 600, 2, settings)
   simulation.run()
-'''
+```
 
-Developers
+# Developers
 
 These are the lead Wonik team members who worked on this project:
 
