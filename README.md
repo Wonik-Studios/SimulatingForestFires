@@ -40,5 +40,7 @@ Example
 These are the lead Wonik team members who worked on this project:
 
 Nathan Kim: https://github.com/MobBarley2021
+
 Joshua Gallinger: https://github.com/rts4
+
 Aryan Zafer: https://github.com/petal-person
