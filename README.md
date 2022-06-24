@@ -1,5 +1,5 @@
 # Forest Fire Simulator
-![FFS Preview Image]([http://url/to/img.png](https://wonik.tech/media/forestfire-media/forestfires-media1.png))
+![FFS Preview Image](https://wonik.tech/media/forestfire-media/forestfires-media1.png)
 
 
 This README file will only focus of the usage of the software. If you are looking for writing about the project vision, please refer to the project at https://wonik.tech/project/simulating-forestfires.
