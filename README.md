@@ -26,7 +26,7 @@ You will be prompted for the parameters before the simulation starts. Also, do n
 
 If instead, you would like to run the code in a program, you’ll have to set the parameters in a dictionary, import the Simulation class from the Simulation.py file, create an instance of the Simulation class and call the run function on it.
 
-The Simulation object’s parameters are (xPixels, yPixels, cellPixelWidth, settings). The settings variable should be a dictionary with “ignition”, “burnout”, “density”, “wind-angle”, “wind-power” as keys. The values for these keys are explained up above.
+The Simulation object’s parameters are (xPixels, yPixels, cellPixelWidth, settings). The settings variable should be a dictionary with “ignition”, “burnout”, “density”, “wind-angle”, “wind-power” as keys.
 
 Example
 ```python
