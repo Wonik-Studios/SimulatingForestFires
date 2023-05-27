@@ -2,7 +2,7 @@
 ![FFS Preview Image](https://resources.wonik.info/projectmedia/forestfiresim/preview.gif)
 
 
-This README file will only focus of the usage of the software. If you are looking for writing about the project vision, please refer to the project at https://wonik.info/project/forest-fire-simulation.
+This README file will only focus of the usage of the software. If you are looking for writing about the project vision, please refer to the project at https://wonik.info/projects/forest-fire-simulation.
 
 Forest Fire Simulator is a program that uses Cellular Automaton to simulate forest fires with surprising accuracy. This project was the result of our attempt to try to improve a similar study that simulates forest fires.
 
