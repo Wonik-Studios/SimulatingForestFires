@@ -1,4 +1,4 @@
-# Forest Fire Simulator
+# Simulating Forest Fires
 ![FFS Preview Image](https://resources.wonik.info/projectmedia/forestfiresim/preview.gif)
 
 
